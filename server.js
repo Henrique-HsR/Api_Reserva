@@ -6,9 +6,6 @@ const prisma = new PrismaClient()
 const app = express()
 app.use(express.json())
 
-const moradores = []
-
-
 app.post('/moradores', async (req, res) => {
 
     await prisma.morador.create({
